@@ -1,0 +1,317 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+body{
+    font-family:  sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(70deg, #b0c7c89f 0%, #bfbdc1 100%)  no-repeat;
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+}
+.container{
+    width: 900px;
+    height: 550px;
+    background: rgb(217, 221, 221);
+    border: 1px solid rgba(235, 235, 235, 0.25);
+    border-radius: 15px;
+    box-shadow: 1px 5px 15px 3px rgb(176, 175, 175);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+    background: rgb(217, 221, 221);
+    transition: .8s ease-in-out  , z-index .9s linear;
+}
+h1{
+    font-weight:800;
+}
+.socialcontainer{
+    display: flex;
+    gap: 20px;
+}
+.socialcontainer i{
+    width:45px;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid rgb(79, 157, 200);
+    border-radius: 50%;
+    background: rgb(208, 217, 221);
+    cursor: pointer;
+    transition: transform .2s, font-size .2s , border .2s;
+}
+.socialcontainer i:hover{
+    transform: scale(.93);
+    font-size: 29px;
+    border:2px solid rgb(211, 95, 52);
+}
+.container .sign-inForm{
+    position: absolute;
+    left: 0;
+    z-index: 101;
+}
+.container .sign-upForm{
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+    z-index: -3;
+}
+.sign-upAnime{
+    left: 50% !important;
+    opacity: 1 !important;
+    z-index: 101 !important;
+}
+.sign-inAnime{ 
+    left: 50% !important;
+    opacity: 0 !important;
+    z-index: -3 !important;
+}
+.container .sign-inForm p{
+    font: 14px Montserrat;
+}
+.container .sign-upForm p{
+    font: 12px Montserrat;
+}
+.form input{
+    width: 280px;
+    font: 17px/33px Roboto;
+    padding-left: 2px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    background: rgb(245, 247, 249);
+}
+.form input:focus{
+    outline: 1px solid rgb(189, 189, 189);
+}
+.form input::placeholder{
+    font-size: small;
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    transition: .3s;
+}
+.form input:focus::placeholder{
+    top:-1px;
+}
+.ForgetPass{
+    cursor: pointer;
+    transition: color  .3s;
+}
+.ForgetPass:hover{
+    color: rgb(85, 85, 172);
+}
+button{
+    width: 110px;
+    height: 35px;
+    font: 15px Roboto;
+    border: 1px solid rgb(13, 150, 148);
+    border-radius: 5px;
+    outline: none;
+    background: rgba(214, 228, 234, 0.618);
+    transition: transform .3s, letter-spacing .3s;
+}
+button:hover{
+    transform: scale(.95);
+    letter-spacing: 3px;
+}
+.overlayContainer{
+    position: relative;
+	height: 100%;
+	width: 200%;
+    overflow: hidden;
+    z-index: 100;
+}
+.overlay{
+    position: absolute;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+    background-color:rgb(155, 203, 210);
+    background-color:rgb(174, 204, 209);
+    transition: transform 0.8s linear;
+    overflow: hidden;
+}
+.overlayContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    transition:  transform 0.8s linear;
+}
+.sign-upOverlay{
+    position:absolute;
+    right: 0%;
+    z-index: 7;
+}
+.sign-inOverlay{
+    position:absolute;
+    left: -170%;
+    z-index: 7;
+}
+.changeOverlayPosition .sign-upOverlay{
+    transform: translateX(170%);
+}
+.changeOverlayPosition .overlay{
+    transform: translateX(-100%);   
+}
+.changeOverlayPosition .sign-inOverlay{
+    transform: translateX(170%);
+}
+.overlayContent h1{
+    font-size: 35px;
+}
+.overlayContent p{
+    width: 80%;
+    font: 16px/28px Montserrat;
+    text-align: center;
+}
+.overlayContent button{
+    width: 150px;
+    height: 42px;
+    font-size: 17px;
+    border-color: rgb(255, 136, 0);
+    background-color: rgba(255, 225, 205, 0.749);
+}
+@media (max-width:930px) {
+    .container{
+        width: 750px;
+        height: 550px;
+    }
+}
+@media (max-width:772px) {
+    .container{
+        width: 700px;
+        height: 550px;
+    }
+}
+@media (max-width:712px) {
+    .container{
+        width: 90vw;
+        height: 450px;
+    }
+    h1{
+        width: 98%;
+        text-align: center;
+    }
+    .container .sign-inForm p{
+        font-size: 12px;
+    }
+    .container .sign-upForm p{
+        font: 11px Montserrat;
+    }
+    .form input{
+        width: 220px;
+        font: 15px/30px Roboto;
+    }
+    .overlayContent p{
+        width: 82%;
+        font:500 12px/22px Montserrat;
+    }
+    .overlayContent button{
+        width: 120px;
+        height: 37px;
+        font-size: 15px;
+    }
+}
+@media (max-width:570px) {
+    .container{
+        height: 90vh !important;
+    }
+    .form{
+        gap: 14px;
+        width: 100%;
+        height: 60%;
+    }
+    .container .sign-inForm{
+        top:0px;
+    }
+    .container .sign-upForm{
+        top:0px;
+    }
+    .sign-upAnime{
+        left: 0 !important;
+        top: 40% !important;
+    }
+    .sign-inAnime{ 
+        top: 50% !important;
+        left: 0 !important;
+    }
+    .overlayContainer{
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+    .overlay{
+        left: 0%;
+        bottom: 0%;
+        width: 100%;
+        height: 40%;
+    }
+    .sign-upOverlay{
+        right: 0%;
+        bottom: 0%;
+    }
+    .sign-inOverlay{
+        left:0%;
+        top: -170%;
+    }
+    .changeOverlayPosition .sign-upOverlay{
+        transform: translateY(170%);
+    }
+    .changeOverlayPosition .overlay{
+        transform: translateY(-150%);   
+    }
+    .changeOverlayPosition .sign-inOverlay{
+        transform: translateY(170%);
+    }
+    .container .sign-inForm p{
+        font-size: 13px;
+    }
+    .container .sign-upForm p{
+        font: 12px Montserrat;
+    }
+    .form input{
+        width: 270px;
+        font: 17px/30px Roboto;
+    }
+    .overlayContent p{
+        width: 80%;
+        font:500 13px/22px Montserrat;
+    }
+}
+@media(max-width:440px) and (max-height:690px){
+    .container{
+        height:700px !important;
+    }
+    .form{
+        gap: 15px;
+    }
+    .overlayContent{
+        gap: 15px;
+    } 
+}
+@media(max-width:440px) and (max-height:561px){
+    .sign-upForm h1{
+        opacity: 0;
+    }
+}
