@@ -42,7 +42,7 @@ const ValidationForm = () => {
 
 
 
-                    // sign in statements
+                    // change overlay statements
 
     const signUp=useRef(null);
     const signIn=useRef(null);
@@ -58,6 +58,8 @@ const ValidationForm = () => {
         document.title=title;
         switchOverlay();
     }
+
+                // sign in statements
 
     const email=useRef(null);
     const password=useRef(null);
@@ -202,7 +204,7 @@ const ValidationForm = () => {
                         </div>
                         <p>or use your account</p>
                         <input type="email" name="email for login" id="email" placeholder="Email" ref={email} />
-                        <input type="password" name="password" id="password" placeholder="Password (8 chr)" ref={password} />
+                        <input type="password" name="password" id="password" placeholder="Password" ref={password} />
                         <p className="ForgetPass">Forget your password?</p>
                         <button id="sign-inSubmit" onClick={signInHandler}> { loading  ? (<Loading />) : "SIGN IN"}</button>
                     </div>

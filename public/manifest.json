@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sign(IN/UP)",
+  "name": "validation Form",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "/src/assets/image/icons8-login-80.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
